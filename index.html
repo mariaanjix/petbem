@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#39282C">
+  <meta name="description" content="Agende banho, tosa ou vacina na PetBem de forma simples e rápida.">
+  <title>PetBem — cuidado pertinho de você</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="PetBem, página inicial"><span class="brand-mark" aria-hidden="true">🐾</span> PetBem</a>
+    <nav aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a><a href="#agendar" aria-current="location">Agendar</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="button button-small" href="#agendar">Agendar agora <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> Cuidado leve para quem faz parte da família</p>
+        <h1 id="hero-title">Agende banho, tosa ou vacina em menos de 1 minuto</h1>
+        <p class="hero-text">Um jeito simples de cuidar de quem enche seus dias de alegria. Escolha o serviço e reserve um horário.</p>
+        <a class="button" href="#agendar">Agendar agora <span aria-hidden="true">→</span></a>
+        <p class="hero-note"><span aria-hidden="true">✓</span> Rápido, fácil e sem complicação</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Ilustração de um cachorro feliz ao lado de um gato">
+        <div class="sun"></div><div class="blob"></div>
+        <span class="pet pet-dog" aria-hidden="true">🐶</span><span class="pet pet-cat" aria-hidden="true">🐱</span>
+        <span class="sparkle sparkle-one" aria-hidden="true">✦</span><span class="sparkle sparkle-two" aria-hidden="true">✳</span>
+        <div class="art-label"><span aria-hidden="true">♡</span> Seu pet em boas mãos</div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="servicos" aria-labelledby="services-title">
+      <div class="section-heading"><div><p class="eyebrow">Um cuidado de cada vez</p><h2 id="services-title">Como podemos ajudar?</h2></div><p>Escolha um serviço e encontre um horário que combine com vocês.</p></div>
+      <div class="service-grid">
+        <button class="service-card" type="button" data-service="Banho" aria-label="Agendar Banho, a partir de 45 reais">
+          <span class="service-icon" aria-hidden="true">🫧</span><span class="service-name">Banho</span><span class="service-desc">Um banho gostoso para renovar a alegria.</span><span class="service-meta">⏱ Cerca de 1 hora</span><span class="service-price">A partir de <strong>R$ 45</strong></span><span class="card-action">Escolher serviço <span aria-hidden="true">→</span></span>
+        </button>
+        <button class="service-card" type="button" data-service="Tosa" aria-label="Agendar Tosa, a partir de 60 reais">
+          <span class="service-icon" aria-hidden="true">✂️</span><span class="service-name">Tosa</span><span class="service-desc">Conforto e cuidado para ficar bem à vontade.</span><span class="service-meta">⏱ Cerca de 1 hora e meia</span><span class="service-price">A partir de <strong>R$ 60</strong></span><span class="card-action">Escolher serviço <span aria-hidden="true">→</span></span>
+        </button>
+        <button class="service-card" type="button" data-service="Vacina" aria-label="Agendar Vacina, a partir de 70 reais">
+          <span class="service-icon" aria-hidden="true">🩺</span><span class="service-name">Vacina</span><span class="service-desc">Proteção e carinho em cada visita.</span><span class="service-meta">⏱ Cerca de 30 minutos</span><span class="service-price">A partir de <strong>R$ 70</strong></span><span class="card-action">Escolher serviço <span aria-hidden="true">→</span></span>
+        </button>
+      </div>
+      <p class="fine-print">Valores fictícios para este exemplo. O preço pode variar conforme o porte do pet.</p>
+    </section>
+
+    <section class="booking-section" id="agendar" aria-labelledby="booking-title">
+      <div class="booking-intro"><p class="eyebrow">É rapidinho</p><h2 id="booking-title">Vamos marcar um cuidado?</h2><p>Preencha os cinco campos e confira tudo antes de confirmar.</p><div class="booking-aside"><span aria-hidden="true">🐾</span><p>Você pode voltar e editar seus dados antes de confirmar.</p></div></div>
+      <div class="booking-panel">
+        <div class="progress" aria-label="Passo 1 de 2: Preencha">
+          <div class="progress-label"><span class="step-current">1</span><strong>Passo 1 de 2: Preencha</strong><span class="progress-line"></span><span class="step-next">2</span><span>Confirme</span></div>
+          <div class="progress-track"><span></span></div>
+        </div>
+        <form id="booking-form" novalidate>
+          <fieldset class="field-group"><legend>1. Qual cuidado seu pet precisa?</legend><p class="field-help" id="service-help">Escolha uma opção. Toque novamente para desfazer.</p>
+            <div class="choice-row" role="radiogroup" aria-describedby="service-help service-error">
+              <button class="choice" type="button" role="radio" aria-checked="false" data-service="Banho"><span aria-hidden="true">🫧</span> Banho</button>
+              <button class="choice" type="button" role="radio" aria-checked="false" data-service="Tosa"><span aria-hidden="true">✂️</span> Tosa</button>
+              <button class="choice" type="button" role="radio" aria-checked="false" data-service="Vacina"><span aria-hidden="true">🩺</span> Vacina</button>
+            </div><p class="field-message" id="service-error" aria-live="polite"></p>
+          </fieldset>
+          <div class="field"><label for="pet-name">2. Nome do pet</label><p class="field-help" id="pet-help">Como seu companheiro se chama? Ex.: Thor</p><input id="pet-name" name="petName" autocomplete="off" aria-describedby="pet-help pet-error" required><p class="field-message" id="pet-error" aria-live="polite"></p></div>
+          <fieldset class="field-group"><legend>3. Data e horário</legend><label class="sub-label" for="date">Escolha o dia</label><p class="field-help" id="date-help">Atendemos de segunda a sábado. Ex.: amanhã</p><input type="date" id="date" name="date" aria-describedby="date-help date-error" required><p class="field-message" id="date-error" aria-live="polite"></p>
+            <span class="sub-label time-label">Agora escolha o horário</span><p class="field-help" id="time-help">Os horários disponíveis ficam aqui.</p><div class="time-grid" role="radiogroup" aria-label="Horários disponíveis" aria-describedby="time-help time-error"><button class="time-choice" type="button" role="radio" aria-checked="false">08:00</button><button class="time-choice" type="button" role="radio" aria-checked="false">09:30</button><button class="time-choice" type="button" role="radio" aria-checked="false">11:00</button><button class="time-choice" type="button" role="radio" aria-checked="false">14:00</button><button class="time-choice" type="button" role="radio" aria-checked="false">15:30</button></div><p class="field-message" id="time-error" aria-live="polite"></p>
+          </fieldset>
+          <div class="field"><label for="tutor-name">4. Nome do tutor</label><p class="field-help" id="tutor-help">Como podemos chamar você? Ex.: Ana</p><input id="tutor-name" name="tutorName" autocomplete="name" aria-describedby="tutor-help tutor-error" required><p class="field-message" id="tutor-error" aria-live="polite"></p></div>
+          <div class="field"><label for="phone">5. WhatsApp</label><p class="field-help" id="phone-help">Com DDD, assim: (11) 98765-4321</p><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="15" aria-describedby="phone-help phone-error" required><p class="field-message" id="phone-error" aria-live="polite"></p></div>
+          <p class="form-status" id="form-status" aria-live="polite">Escolha um serviço para começar. Vamos mostrar o que falta.</p>
+          <button class="button button-wide" id="review-button" type="submit" disabled>Revisar agendamento <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-title"><div class="section-heading"><div><p class="eyebrow">Pode perguntar</p><h2 id="faq-title">Dúvidas frequentes</h2></div><p>Um pouquinho de informação para deixar tudo mais fácil.</p></div>
+      <div class="faq-grid"><details><summary>Posso mudar o horário depois?</summary><p>Sim. Antes de confirmar, use “Editar” para ajustar os dados. Depois, fale com a gente pelo WhatsApp.</p></details><details><summary>O que preciso levar para a vacina?</summary><p>Se tiver, traga a carteirinha de vacinação do seu pet. Para este agendamento de demonstração, não é obrigatório.</p></details><details><summary>Como sei se o horário está disponível?</summary><p>Os horários exibidos no formulário são opções disponíveis para escolher.</p></details></div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contact-title"><div class="contact-copy"><p class="eyebrow">Estamos por aqui</p><h2 id="contact-title">Cuidado pertinho de você</h2><p>Tem alguma dúvida? Nossa equipe fictícia está pronta para ajudar.</p><a class="button" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20PetBem!%20Tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a></div><div class="contact-details"><p><span aria-hidden="true">📍</span><span><strong>Endereço</strong>Rua das Flores, 123 — Vila Serena</span></p><p><span aria-hidden="true">🕒</span><span><strong>Horário</strong>Segunda a sábado, das 8h às 17h</span></p><p><span aria-hidden="true">☎️</span><span><strong>Telefone fictício</strong>(11) 99999-9999</span></p></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#inicio"><span aria-hidden="true">🐾</span> PetBem</a><p>Feito com carinho para cuidar de quem você ama. <span>© PetBem — clínica fictícia</span></p><a href="#inicio">Voltar ao início ↑</a></footer>
+
+  <dialog id="review-dialog" aria-labelledby="review-title"><div class="dialog-content"><button class="dialog-close" type="button" data-close aria-label="Fechar revisão">×</button><p class="eyebrow">Passo 2 de 2: Confirme</p><h2 id="review-title">Confira seu agendamento</h2><p class="dialog-lead">Veja se está tudo certo antes de confirmar.</p><dl class="summary-list" id="review-summary"></dl><div class="dialog-actions"><button class="button" id="confirm-button" type="button">Confirmar agendamento <span aria-hidden="true">✓</span></button><button class="button button-secondary" type="button" data-close>Editar</button><button class="text-button" type="button" data-close>Cancelar</button></div></div></dialog>
+
+  <section class="success-screen" id="success-screen" hidden tabindex="-1" aria-labelledby="success-title" aria-live="polite"><div class="success-card"><div class="success-icon" aria-hidden="true">✓</div><p class="eyebrow">Tudo certo!</p><h2 id="success-title">Agendamento confirmado!</h2><p class="success-lead">Seu pedido foi registrado com carinho. Guarde o número do protocolo:</p><p class="protocol" id="protocol"></p><dl class="summary-list" id="success-summary"></dl><div class="success-actions"><button class="button" id="new-booking" type="button">Fazer novo agendamento <span aria-hidden="true">↻</span></button><a class="button button-secondary" id="calendar-link" href="#">Adicionar ao calendário <span aria-hidden="true">＋</span></a></div><a class="back-link" href="#contato">Precisa de ajuda? Fale com a PetBem</a></div></section>
+</body>
+</html>
